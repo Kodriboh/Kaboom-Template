@@ -8,5 +8,6 @@ loadRoot("http://localhost:3001/");
 loadSprite('crapper', 'images/sprites/crapper.png');
 
 add([
+    pos(50, 50),
     sprite('crapper'),
 ]);
