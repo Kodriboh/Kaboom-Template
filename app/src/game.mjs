@@ -26,6 +26,10 @@ keyDown('left', () => {
     crapper.move(-CRAPPER_VELOCITY, 0);
 });
 
+keyDown('space', () => {
+    crapper.move(0, CRAPPER_VELOCITY);
+});
+
 addLevel([
     "                           ",
     "                           ",
@@ -50,5 +54,10 @@ addLevel([
         sprite('enemy'), 
         area(), 
         body(),
+        'dangerous'
     ]
+});
+
+crapper.collides('dangerous', () => {
+    destroy(crapper);
 });
