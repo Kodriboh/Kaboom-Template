@@ -20,7 +20,7 @@ To quickly get started with this template run the following commands from the ro
 
 <pre>
                                 <code>yarn install</code>
-                                <code>yarn start</code>
+                                <code>yarn start:dev</code>
 </pre>
 
 This will run the parcel bundler and create a distribution folder. To build the application for production you can simply run: <code>yarn build</code>.
