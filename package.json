@@ -12,6 +12,6 @@
     "start:app": "cd app && yarn start",
     "install-app": "cd app && yarn install",
     "install-server": "cd server && yarn install",
-    "install": "concurrently \"yarn:install-server\" \"yarn:install-app\""
+    "install": "concurrently \"yarn install-server\" \"yarn install-app\""
   }
 }
