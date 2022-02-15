@@ -7,10 +7,13 @@ kaboom();
 loadRoot("http://localhost:3001/");
 loadSprite('crapper', 'images/sprites/crapper.png');
 loadSprite('dirt', 'images/sprites/dirt.png');
+loadSprite('enemy', 'images/sprites/enemy.png');
 
 add([
     pos(20, 280),
     sprite('crapper'),
+    area(),
+    body(),
 ]);
 
 addLevel([
@@ -23,10 +26,19 @@ addLevel([
     "                           ",
     "                           ",
     "                           ",
-    "                           ",
+    "              @             ",
     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 ], {
     width: 32,
     height: 32,
-    'x': () => [sprite('dirt')]
+    'x': () => [
+        sprite('dirt'), 
+        area(),
+        solid(),
+    ],
+    '@': () => [
+        sprite('enemy'), 
+        area(), 
+        body(),
+    ]
 });
